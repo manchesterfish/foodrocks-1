@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>The Dish you ordered is:</strong>
+  <%= @order.dish.dish_name %>
+</p>
+
+<p>
+  <strong>Your Phone Number (Used to pick up):</strong>
+  <%= @order.phone_num %>
+</p>
+
+<%= link_to 'Back to Menu', dishes_path %>

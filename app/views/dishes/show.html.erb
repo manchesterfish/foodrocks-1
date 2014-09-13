@@ -1,0 +1,22 @@
+<p>
+<%= image_tag(@dish.ImageURL, size: "200x180") %>
+</p>
+
+<p>
+  <strong>Restaurant:</strong>
+  <%= @dish.restaurant %>
+</p>
+
+<p>
+  <strong>Dish name:</strong>
+  <%= @dish.dish_name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @dish.price %>
+</p>
+
+<%= render "orders/form" %>
+
+<%= link_to 'Back', dishes_path %>

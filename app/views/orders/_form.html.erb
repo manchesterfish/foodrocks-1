@@ -1,0 +1,14 @@
+<%= form_for([@dish, @dish.orders.build]) do |f| %>
+
+  <div class="field">
+    <%= f.hidden_field :dish_id %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_num %><br>
+    <%= f.number_field :phone_num %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Make Order"%>
+  </div>
+
+<% end %>

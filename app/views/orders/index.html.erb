@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing orders</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Dish</th>
+      <th>Phone num</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.time %></td>
+        <td><%= order.dish.dish_name %></td>
+        <td><%= order.phone_num %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'Check the Dishes', dishes_admin_path %> |
+<%= link_to 'Goto Menu Page', dishes_path %>
