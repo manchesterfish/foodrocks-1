@@ -33,4 +33,6 @@ ActiveRecord::Schema.define(version: 20140912160927) do
     t.string   "time"
   end
 
+  add_index "orders", ["dish_id"], name: "index_orders_on_dish_id"
+
 end
