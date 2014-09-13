@@ -14,7 +14,25 @@
           <%= link_to image_tag(@dishes.first.ImageURL), @dishes.first %>
           <div class="container">
             <div class="carousel-caption">
-              <p><%= link_to 'Order now', @dishes.first, class: "btn btn-lg btn-primary", role: "button" %><p>
+              
+            <table class="table transbox">
+              <tbody>
+                <tr>
+                    <td><p><%= link_to @dishes.first.restaurant, @dishes.first.restaurantURL %></p></td>
+                </tr>
+                <tr>
+                    <td><p><%= @dishes.first.dish_name %></p></td>
+                </tr>
+                <tr>
+                    <td><p><%= @dishes.first.price %> hkd</p></td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+
+              <p><%= link_to 'Order now', @dishes.first, class: "btn btn-lg btn-default", role: "button" %>&nbsp;&nbsp;&nbsp;还剩<%=@dishes.first.stock - @dishes.first.orders.size %>份</p>
             </div> 
           </div>
         </div>
@@ -24,7 +42,7 @@
             <%= link_to image_tag(dish.ImageURL), dish %>
             <div class="container">
               <div class="carousel-caption">
-              <%= link_to 'Order now', dish, class: "btn btn-lg btn-primary", role: "button" %>
+              <%= link_to 'Order now', dish, class: "btn btn-lg btn-default", role: "button" %>
               </div>
             </div>
           </div>
