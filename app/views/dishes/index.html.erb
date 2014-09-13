@@ -18,7 +18,7 @@
             <table class="table transbox">
               <tbody>
                 <tr>
-                    <td><p><%= link_to @dishes.first.restaurant, @dishes.first.restaurantURL %></p></td>
+                    <td><p><%= link_to @dishes.first.restaurant, @dishes.first.restaurantURL, :class=>'a' %></p></td>
                 </tr>
                 <tr>
                     <td><p><%= @dishes.first.dish_name %></p></td>
@@ -29,10 +29,7 @@
 
               </tbody>
             </table>
-
-
-
-              <p><%= link_to 'Order now', @dishes.first, class: "btn btn-lg btn-default", role: "button" %>&nbsp;&nbsp;&nbsp;还剩<%=@dishes.first.stock - @dishes.first.orders.size %>份</p>
+              <p>还剩<%=@dishes.first.stock - @dishes.first.orders.size %>份<%= link_to 'Order now', @dishes.first, class: "btn btn-lg btn-default btn-block", role: "button" %>&nbsp;&nbsp;&nbsp;</p>
             </div> 
           </div>
         </div>
@@ -42,7 +39,23 @@
             <%= link_to image_tag(dish.ImageURL), dish %>
             <div class="container">
               <div class="carousel-caption">
-              <%= link_to 'Order now', dish, class: "btn btn-lg btn-default", role: "button" %>
+
+              <table class="table transbox">
+                <tbody>
+                  <tr>
+                      <td><p><%= link_to dish.restaurant, dish.restaurantURL, :class=>'a' %></p></td>
+                  </tr>
+                  <tr>
+                      <td><p><%= dish.dish_name %></p></td>
+                  </tr>
+                  <tr>
+                      <td><p><%= dish.price %> hkd</p></td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <p>还剩<%=dish.stock - dish.orders.size %>份<%= link_to 'Order now', @dishes.first, class: "btn btn-lg btn-default btn-block", role: "button" %>&nbsp;&nbsp;&nbsp;</p>
+
               </div>
             </div>
           </div>

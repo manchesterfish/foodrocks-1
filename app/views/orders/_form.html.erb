@@ -4,19 +4,19 @@
     <%= f.hidden_field :dish_id %>
   </div>
 
+
+
   <div class="field form-group">
-    <%= f.label :phone_num, :class=>'col-sm-5 control-label text-white' %>
-    <div class="col-sm-5">
+    <%= f.label "电话号码", :class=>'col-sm-5 control-label text-white'%>
+
+    <div class="col-sm-4">
       <%= f.number_field :phone_num, :class=>'form-control' %>
     </div>
   </div>
 
-  <div class="actions col-sm-offset-2 col-sm-2">
-    <br>
-    <%= link_to 'Back', dishes_path, class: "btn btn-lg btn-default btn-block", role: "button" %>
-  </div>
 
-  <div class="actions col-sm-offset-1 col-sm-5">
+
+  <div class="actions col-sm-offset-3 col-sm-6">
     <br>
     <%= f.submit "Place Order", :class=>'btn btn-lg btn-danger btn-block'%>
   </div>

@@ -13,6 +13,28 @@
  </div>
 
 
+             <table class="table transbox table-width">
+                <tbody>
+                  <tr>
+                      <td><p><%= link_to @dish.restaurant, @dish.restaurantURL, :class=>'a' %></p></td>
+                  </tr>
+                  <tr>
+                      <td><p><%= @dish.dish_name %></p></td>
+                  </tr>
+                  <tr>
+                      <td><p><%= @dish.price %> hkd</p></td>
+                  </tr>
+                  
+
+
+
+                </tbody>
+             </table>
+
+
+<%= render "orders/form" %>
+
+<!--
  <form class="form-horizontal" role="form">
 
     <div class="form-group">
@@ -32,7 +54,7 @@
  </form>
 </div>
 
-<!--
+
 <p>
   <strong>Restaurant:</strong>
   <%= @dish.restaurant %>
@@ -48,7 +70,4 @@
   <%= @dish.price %>
 </p>
 -->
-<div class='container'>
-<%= render "orders/form" %>
-</div>
-<%= link_to 'Back', dishes_path %>
+
