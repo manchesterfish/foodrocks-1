@@ -80,7 +80,7 @@
 }
 
 label{
-	font-size: 40px;
+	font-size: 24px;
 }
 
 .large-font-size{
@@ -97,15 +97,31 @@ label{
 
 
 
-.table-width{
-  width:60%;
+.table-width{ 
+  width:45%;
   margin: 0 auto;
 }
 
+.bottom{
+  position: absolute;  
+  bottom: 20px;
+}
 
 .table-short{
   width: 60%;
   margin: 0 auto;  
 }
+
+.table-comfirmed{
+  text-align: center;
+
+}
+.table-comfirmed p{
+  font-size: 24px;
+}
+
+
+
+
 
 
